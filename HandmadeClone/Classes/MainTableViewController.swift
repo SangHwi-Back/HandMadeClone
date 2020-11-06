@@ -33,6 +33,8 @@ class MainTableViewController: UITableViewController {
         
         guard let model = iTunesSearchResult?.results[indexPath.row] else { return cell }
         
+        cell.trackId = model.trackId
+        
         // serviceImage : artworkUrl512
         let serviceImageUrl = URL(string: model.artworkUrl512)
         if let serviceImageUrl = serviceImageUrl {
@@ -97,6 +99,13 @@ class MainTableViewController: UITableViewController {
         
         return cell
     }
+    // delegate 보다 먼저 실행.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? DetailViewController,
+           let trackId = (sender as? MainTableItemCell)?.trackId {
+            dest.result = self.iTunesSearchResult?.results.filter({$0.trackId == trackId}).first
+        }
+    }
 }
 
 class MainTableItemCell: UITableViewCell {
@@ -106,6 +115,7 @@ class MainTableItemCell: UITableViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var ratingView: UIView!
+    var trackId: Int?
 }
 
 
