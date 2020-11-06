@@ -58,16 +58,32 @@
 		1B561A6C2554D2F7000C4244 /* HandmadeClone */ = {
 			isa = PBXGroup;
 			children = (
-				1B561A6D2554D2F7000C4244 /* AppDelegate.swift */,
-				1B561A6F2554D2F7000C4244 /* SceneDelegate.swift */,
-				1B561A712554D2F7000C4244 /* ViewController.swift */,
-				1B561A732554D2F7000C4244 /* Main.storyboard */,
+				1B561A862554D4A2000C4244 /* Classes */,
+				1B561A852554D485000C4244 /* Storyboards */,
 				1B561A792554D2F9000C4244 /* Assets.xcassets */,
-				1B561A7B2554D2F9000C4244 /* LaunchScreen.storyboard */,
 				1B561A7E2554D2F9000C4244 /* Info.plist */,
 				1B561A762554D2F7000C4244 /* HandmadeClone.xcdatamodeld */,
 			);
 			path = HandmadeClone;
+			sourceTree = "<group>";
+		};
+		1B561A852554D485000C4244 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1B561A732554D2F7000C4244 /* Main.storyboard */,
+				1B561A7B2554D2F9000C4244 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1B561A862554D4A2000C4244 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1B561A6D2554D2F7000C4244 /* AppDelegate.swift */,
+				1B561A6F2554D2F7000C4244 /* SceneDelegate.swift */,
+				1B561A712554D2F7000C4244 /* ViewController.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
