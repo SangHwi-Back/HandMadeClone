@@ -28,12 +28,7 @@ class ViewController: UIViewController {
                     do {
                         
                         self.iTunesSearchResult = try JSONDecoder().decode(iTunesSearch.self, from: data)
-                        
-                        DispatchQueue.main.async {
-                            self.titleLabel.text = (self.titleLabel.text ?? "") + "\n잠시만 기다려주세요."
-                        }
-                        
-                        sleep(2)
+//                        sleep(2)
                         
                         DispatchQueue.main.async {
                             
