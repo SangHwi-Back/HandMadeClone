@@ -43,22 +43,16 @@ class DetailViewController: UIViewController {
         self.releaseNoteTextView.isHidden = true
         self.descriptionTextView.transform = CGAffineTransform(translationX: 0, y: self.releaseNoteTextView.frame.height * -1)
         
-        self.contentsScrollView.frame.size.height = UIScreen.main.bounds.height
-        self.contentsScrollView.contentSize = contentsView.frame.size
-        
+        //밑의 두줄 문제
+        self.contentsScrollView.frame.size = self.view.frame.size
+        self.contentsScrollView.contentSize = self.contentsView.frame.size
+        self.contentsScrollView.contentOffset = CGPoint(x: 0, y: 0)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        
-        self.releaseNoteTextView.isHidden = true
-        
-        var tempFrame = self.descriptionTextView.frame
-        tempFrame = CGRect(origin: tempFrame.origin,
-                           size: CGSize(width: tempFrame.width, height: tempFrame.height - self.releaseNoteTextView.frame.height))
-        self.descriptionTextView.frame = tempFrame
         
         if result != nil {
             
@@ -117,12 +111,22 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func showButtonTouchUpInside(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "", message: self.shareButtonURL?.absoluteString ?? "", preferredStyle: .alert)
-        let action1 = UIAlertAction(title: "확인", style: .cancel, handler: nil)
         
-        alertController.addAction(action1)
+        if let url = self.shareButtonURL {
+            
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
+    @IBAction func shareButtonTouchUpInside(_ sender: UIButton) {
         
-        self.present(alertController, animated: true, completion: nil)
+        if let urlString = self.shareButtonURL?.absoluteString {
+            let items = [urlString]
+            let viewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+            
+            viewController.excludedActivityTypes = []
+            present(viewController, animated: true, completion: nil)
+        }
     }
 }
 
@@ -132,3 +136,4 @@ extension CGSize {
         return CGSize(width: lhs.width + rhs.width, height: lhs.height + rhs.height)
     }
 }
+

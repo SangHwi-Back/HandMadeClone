@@ -15,6 +15,7 @@
 		1B561A7A2554D2F9000C4244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B561A792554D2F9000C4244 /* Assets.xcassets */; };
 		1B561A7D2554D2F9000C4244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B561A7B2554D2F9000C4244 /* LaunchScreen.storyboard */; };
 		1B561A8B2554D930000C4244 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B561A8A2554D930000C4244 /* MainTableViewController.swift */; };
+		1B85E9DC2559036C0073FF1E /* RatingView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85E9DB2559036C0073FF1E /* RatingView+Extension.swift */; };
 		1B95D380255527BC00DAC0E8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95D37F255527BC00DAC0E8 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		1B561A7C2554D2F9000C4244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B561A7E2554D2F9000C4244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B561A8A2554D930000C4244 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		1B85E9DB2559036C0073FF1E /* RatingView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RatingView+Extension.swift"; sourceTree = "<group>"; };
 		1B95D37F255527BC00DAC0E8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				1B561A712554D2F7000C4244 /* ViewController.swift */,
 				1B561A8A2554D930000C4244 /* MainTableViewController.swift */,
 				1B95D37F255527BC00DAC0E8 /* DetailViewController.swift */,
+				1B85E9DB2559036C0073FF1E /* RatingView+Extension.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				1B561A6E2554D2F7000C4244 /* AppDelegate.swift in Sources */,
 				1B95D380255527BC00DAC0E8 /* DetailViewController.swift in Sources */,
 				1B561A8B2554D930000C4244 /* MainTableViewController.swift in Sources */,
+				1B85E9DC2559036C0073FF1E /* RatingView+Extension.swift in Sources */,
 				1B561A702554D2F7000C4244 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -103,6 +103,7 @@ class MainTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? DetailViewController,
            let trackId = (sender as? MainTableItemCell)?.trackId {
+            
             dest.result = self.iTunesSearchResult?.results.filter({$0.trackId == trackId}).first
         }
     }
